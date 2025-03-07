@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+<title>
+    Planning Alerts API | Planning Alerts
+</title>
+
+
+<script>
+window.dataLayer = window.dataLayer || [];
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQK6F2JF');</script>
+<!-- End Google Tag Manager -->
+
+  <script defer event-signed_in="false" data-domain="planningalerts.org.au" src="https://www.planningalerts.org.au/js/script.manual.outbound-links.pageview-props.js"></script>
+  <script>
+    window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+    plausible('pageview', { u: "https://www.planningalerts.org.au/api/howto" + window.location.search });
+  </script>
+
+
+<link rel="stylesheet" href="https://www.planningalerts.org.au/assets/tailwind-418e4e7ba5a56a35a48890abd3758da737cd3ebaab76d5054b1f4bd3333f5bfe.css" data-turbo-track="reload" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Merriweather:wght@700;900&display=fallback" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.1" defer="defer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.5" defer="defer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js" defer="defer"></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer="defer"></script>
+<script src="https://www.planningalerts.org.au/assets/application-c409bfa5fcf9adbf5e93d0043c398374858f44ce2410272ae9e609f0505b4d79.js"></script>
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.planningalerts.org.au/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.planningalerts.org.au/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.planningalerts.org.au/favicon-16x16.png">
+<link rel="manifest" href="../site.webmanifest">
+<script>
+  (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+    key: "AIzaSyC_KnWssj4Y2lMPR_o53JcVO2SA6vHWJcU",
+    v: "weekly",
+    // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+    // Add other bootstrap parameters as needed, using camel case.
+    region: "au"
+  });
+</script>
+
+  </head>
+  <body x-data="{ bodyScrolling: true }" x-bind:class="{ 'overflow-hidden': !bodyScrolling}">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQK6F2JF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <header>
+  <div class="hidden bg-header-orange sm:block">
+    <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+      <div class="flex flex-row-reverse items-center h-8">
+        <a class="focus:outline-none focus:bg-sun-yellow p-1" href="https://www.oaf.org.au">
+          <div class="text-base font-medium tracking-wide text-dark-brown hover:text-dark-navy">
+              An <span class="underline">OpenAustralia Foundation</span> service
+          </div>
+</a>      </div>
+
+</div>
+  </div>
+  <div class="flex flex-col">
+    <div class="hidden py-8 sm:block bg-yellow bg-header-pattern xl:bg-center">
+      <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+        <a class="inline-block focus:outline-none focus:ring-4 focus:ring-sun-yellow" href="../index.html">
+          <img alt="Planning Alerts. Email alerts of planning applications near you" src="https://www.planningalerts.org.au/assets/logo-b927c3a2b297503d11425efabc5af82195f5109f4cdcf5b1693529b10db1ab2e.svg" width="408" height="96" />
+</a>
+</div>
+    </div>
+    <div class="pt-10 pb-2 sm:bg-light-grey sm:py-0">
+      <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+        <nav aria-label="Main">
+          <div x-data="{ open: false }">
+  <button x-on:click="open = true; bodyScrolling = false" type="button" class="flex flex-row-reverse w-full h-16 text-sm rounded-lg group md:hidden focus:outline-none">
+    <div class="inline-flex flex-row-reverse items-center text-navy group-focus:bg-sun-yellow">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+
+      <span class="px-2 text-base font-medium">Menu</span>
+    </div>
+  </button>
+  <div x-show="open" x-cloak class="fixed top-0 left-0 z-50 w-full h-full py-24 overflow-y-scroll text-2xl text-navy bg-light-grey">
+    <div class="max-w-sm px-10 mx-auto">
+      <button x-on:click="open = false; bodyScrolling = true" class="inline-flex items-center focus:outline-none focus:bg-sun-yellow">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+        <span class="pr-2 text-lg font-medium">Close</span>
+      </button>
+      <img class="w-60" alt="Planning Alerts" src="https://www.planningalerts.org.au/assets/logo-navy-d89230356ec608b6c7598347fdb7bb7ace1f54a4464a2da24a619c230efe4590.svg" width="240" height="32" />
+      <div class="mt-8 font-medium">
+        <ul>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="../index.html">Home</a></li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="../applications/address.html">Search</a></li>
+          <li>
+            <a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow underline" href="howto.html">
+              Planning Alerts API
+</a>          </li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="../faq.html">Help</a></li>
+          <li class="mt-4"><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="../about.html">About</a></li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="../atdis/test.html">Get involved</a></li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="../authorities.html">Coverage</a></li>
+          <li><a class="focus:outline-none focus:bg-sun-yellow" href="https://github.com/openaustralia/planningalerts">Source code</a></li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="../help/contact.html">Contact us</a></li>
+          <li class="mt-4">
+              <a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="../profile/alerts/new.html">Sign In</a>
+          </li>
+        </ul>
+      </div>
+      <p class="mt-10 text-lg font-regular">
+        Built and maintained by
+        <a href="https://www.oaf.org.au/" class="underline focus:outline-none focus:bg-sun-yellow">OpenAustralia Foundation</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+          <div class="hidden md:block">
+  <div class="flex justify-between h-16 text-xl font-medium text-navy">
+    <ul class="flex space-x-8">
+      <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-transparent hover:border-light-grey2" href="../index.html">
+    <div class="m-auto">
+      Home
+    </div>
+</a></li>
+
+      <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-transparent hover:border-light-grey2" href="../applications/address.html">
+    <div class="m-auto">
+      Search
+    </div>
+</a></li>
+
+      <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-fuchsia" href="howto.html">
+    <div class="m-auto">
+      
+        Planning Alerts API
+
+    </div>
+</a></li>
+      <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-transparent hover:border-light-grey2" href="../faq.html">
+    <div class="m-auto">
+      Help
+    </div>
+</a></li>
+
+    </ul>
+    <ul class="flex">
+        <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-transparent hover:border-light-grey2" href="../profile/alerts/new.html">
+    <div class="m-auto">
+      Sign In
+    </div>
+</a></li>
+
+    </ul>
+  </div>
+</div>
+
+        </nav>
+
+</div>
+    </div>
+    <div class="sm:hidden xl:bg-center">
+      <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+        <a class="inline-block focus:outline-none focus:bg-sun-yellow" href="../index.html">
+          <img alt="Planning Alerts" src="https://www.planningalerts.org.au/assets/logo-navy-d89230356ec608b6c7598347fdb7bb7ace1f54a4464a2da24a619c230efe4590.svg" width="350" height="46" />
+</a>
+</div>
+    </div>
+  </div>
+</header>
+
+    <main>
+      <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+        
+        
+
+
+
+        <div class="mb-32 mt-9 sm:mt-16">
+          
+
+<div class="flex flex-col items-center">
+  <h1 class="text-2xl font-bold text-navy font-display max-w-4xl">
+    Planning Alerts API
+</h1>
+
+  <p class="max-w-2xl mt-6 mb-16 text-3xl font-bold text-center text-navy font-display">
+    Seamlessly integrate planning alerts data into your custom application
+  </p>
+
+  <img alt="Abstract illustration of data moving around" src="https://www.planningalerts.org.au/assets/illustration/data-fb9aeec0fd8302255a240b5083cfd5ffe3d1886da99ac3c8a785113fd28b268c.svg" />
+</div>
+
+<div class="mt-16">
+  <div class="prose prose-xl prose-pre:bg-light-grey prose-pre:text-navy prose-pre:rounded-none prose-td:border-2 prose-td:border-white prose-td:bg-light-grey prose-td:px-4 prose-th:px-4 prose-th:py-3 prose-th:text-white prose-th:bg-navy prose-th:whitespace-nowrap max-w-none prose-h3:font-sans prose-h3:text-xl prose-h3:font-bold prose-h2:font-display prose-h2:text-2xl prose-h2:font-bold prose-a:underline prose-a:font-bold prose-a:text-fuchsia hover:prose-a:text-fuchsia-darker focus:prose-a:outline-none focus:prose-a:bg-sun-yellow prose-h1:text-3xl prose-h1:font-display prose-h1:font-bold prose-ul:pl-6 prose-li:pl-0 prose-li:my-0 prose-li:marker:text-navy">
+  
+    <p>
+      Planning Alerts Application Programming Interface (API) serves community groups, businesses, NGOs, and civic-minded individuals by providing access to trusted planning and development application data.
+    </p>
+    <ul>
+      <li>Sourced from planning authorities around Australia</li>
+      <li>Easy to use REST API</li>
+      <li>Data updated daily</li>
+      <li>Save considerable time and money by not having to develop this stuff yourself</li>
+      <li>Delivering reliable and trustworthy service for over 14 years</li>
+      <li>As a bonus support a charity doing good work</li>
+    </ul>
+
+</div>
+</div>
+
+<section class="pt-12 pb-16 mt-12 text-xl border-t text-navy border-t-light-grey2">
+  <h2 class="text-2xl font-bold text-navy font-display mb-6">Who uses our API?</h2>
+
+  <div class="flex flex-col justify-between gap-8 sm:flex-row">
+    <div class="max-w-2xl">
+      <p>Lots of people!</p>
+      <p class="mt-6">
+        Real estate developers and agents, construction companies, urban planners, architects,
+        local government and municipalities, property management firms, community advocacy groups, environmental and heritage organizations,
+        academics,
+        legal firms, conveyancers, utility companies, insurance companies, researchers, tech startups and app developers are interested in this data.
+      </p>
+    </div>
+    <img alt="Illustration of headshot of three different people" class="max-w-64" src="https://www.planningalerts.org.au/assets/illustration/headshots_three_people-a51312339b7d571a3bcd24e93436f2e89fa8771552ee5d69f9d2cb076f41ac4c.svg" />
+  </div>
+</section>
+
+<div id="plans" class="flex flex-col items-center gap-4 py-16 text-xl border-t lg:items-stretch lg:grid lg:grid-cols-3 border-t-light-grey text-navy">
+  <section class="flex flex-col justify-between max-w-lg p-10 my-8 text-center bg-light-grey">
+    <div class="flex flex-col items-center">
+      <img alt="" class="mb-8" src="https://www.planningalerts.org.au/assets/plans/community-f7cd5d0f714f738c3dabf7ccb6fa3c34c84430882be24a7b25f11ae627394646.svg" />
+      <h2 class="text-2xl font-bold text-navy font-display mb-8">
+        Community Plan
+</h2>
+      <div class="pb-4">
+        <p>
+          API data for strictly non-commercial use for public benefit.
+        </p>
+        <p class="my-8">
+          <span class="text-3xl font-bold font-display">$0</span>
+          AUD
+          <span class="block mt-1">/ month</span>
+        </p>
+        <div class="text-left">
+          <ul class="pl-6  text-xl list-disc list-outside text-navy">
+    <li>
+              Return up to
+              100,000
+              applications per day
+</li>
+    <li>Full use of the API</li>
+</ul>
+        </div>
+      </div>
+    </div>
+    <p class="my-4">
+      <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline block" href="../help/contact@reason=I+want+API+access+or+commercial+use.html">Contact us</a> to apply
+    </p>
+  </section>
+
+  <section class="flex flex-col justify-between max-w-lg py-10 text-center px-14 bg-light-grey">
+    <div class="flex flex-col items-center">
+      <img alt="" class="mb-8" src="https://www.planningalerts.org.au/assets/plans/standard-e74f5dc66ce3224a13a3935e11dede23ccc42e34b68bda0f472fd0ced718dd46.svg" />
+      <h2 class="text-2xl font-bold text-navy font-display mb-8">
+        Standard Plan
+</h2>
+      <div class="pb-4">
+        <p>
+          Set and forget reliable API service, effortlessly integrated into your application.
+        </p>
+        <p class="my-8">
+          <span class="text-3xl font-bold font-display">$3499</span>
+          AUD
+          <span class="block mt-1">+ GST / month</span>
+        </p>
+        <div class="text-left">
+          <ul class="pl-6  text-xl list-disc list-outside text-navy">
+    <li>
+              Return up to
+              500,000
+              applications per day
+</li>
+    <li>
+              1 product
+</li>
+    <li>
+              Priority email support
+</li>
+</ul>
+        </div>
+      </div>
+    </div>
+    <p class="my-4">
+      <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline block" href="../help/contact@reason=I+want+API+access+or+commercial+use.html">Contact us</a>
+      to sign up
+    </p>
+  </section>
+
+  <section class="flex flex-col justify-between max-w-lg p-10 my-8 text-center bg-light-grey">
+    <div class="flex flex-col items-center">
+      <img alt="" class="mb-8" src="https://www.planningalerts.org.au/assets/plans/premium-13105862c16674076fc32fde81e53b6cdc6a55ed2f900b0b07158cb3b76ebdc4.svg" />
+      <h2 class="text-2xl font-bold text-navy font-display mb-8">
+        Premium Plan
+</h2>
+      <div class="pb-4">
+        <p>
+          More power and flexibility. Talk to us for pricing.
+        </p>
+        <p class="mt-8 mb-4 text-left">
+          Potential add ons can include:
+        </p>
+        <div class="text-left">
+          <ul class="pl-6  text-xl list-disc list-outside text-navy">
+    <li>
+              Access to bulk data API
+</li>
+    <li>
+              Multiple products
+</li>
+    <li>
+              Return more than
+              500,000
+              applications per day
+</li>
+    <li>
+              Search for applications by description
+</li>
+    <li>
+              Customised integration options
+</li>
+</ul>
+        </div>
+      </div>
+    </div>
+    <p class="my-4">
+      <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline block" href="../help/contact@reason=I+want+API+access+or+commercial+use.html">Contact us</a>
+      to discuss your needs
+    </p>
+  </section>
+</div>
+
+  <section class="pb-16">
+    <div class="flex flex-col items-center p-16 text-xl bg-light-grey text-navy">
+      <div class="text-center">
+        <h2 class="text-2xl font-bold text-navy font-display">
+          Instant access 14 day trial
+</h2>
+        <p class="mt-1 text-3xl font-bold text-navy">
+          Build, test and explore with live API data
+        </p>
+      </div>
+      <p class="max-w-lg mt-8 text-center">
+        Enjoy up to
+        100
+        requests a day (returning up to a total of
+        10,000
+        applications per day) for
+        14 days.
+      </p>
+      <img alt="" class="my-8" src="https://www.planningalerts.org.au/assets/illustration/key-48bce77f1b6af40b7a927aed7b8a61d73ca01472153338a5a5f8cf52e79db7fa.svg" width="237" height="155" />
+        <p class="max-w-md text-center">
+          To get an instant API key simply
+          <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline " href="../users/sign_up.html">create an account</a>
+          or
+          <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline " href="../profile/alerts/new.html">sign in</a>.
+        </p>
+    </div>
+  </section>
+
+<section class="pt-12 pb-16 text-xl border-t border-t-light-grey2 text-navy">
+  <h2 class="text-2xl font-bold text-navy font-display mb-6">What&#39;s in the API?</h2>
+
+  <div class="flex flex-col items-start justify-between gap-8 sm:flex-row">
+    <div class="max-w-2xl">
+      <p>
+        In our API you can find Australia-wide data, updated daily:
+      </p>
+      <div class="my-6">
+        <ul class="pl-6  text-xl list-disc list-outside text-navy">
+    <li>Single Location by longitude/latitude</li>
+    <li>Area by longitude/latitude</li>
+    <li>Planning authority</li>
+    <li>Postcode</li>
+    <li>Suburb</li>
+</ul>
+      </div>
+
+
+      <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline " href="developer.html">View the developer documentation</a>
+
+      <section class="pt-8">
+        <h3 class="text-xl font-bold text-navy font-sans">What&#39;s not in the API?</h3>
+
+        <p>
+          For privacy reasons our API does not return personal information including Planning Alerts user comments or names associated with applications.
+        </p>
+      </section>
+    </div>
+    <img alt="Illustration of headshot of three different people" class="max-w-64" src="https://www.planningalerts.org.au/assets/illustration/person_big_arms-6e0aa0e79cc4def019c81f69ce1d16cecae4d78a8bdc3839a4faa0b5face5815.svg" />
+  </div>
+</section>
+
+<section class="pt-12 pb-32 text-xl border-t border-light-grey2 text-navy">
+  <h2 class="text-2xl font-bold text-navy font-display mb-16">Used by</h2>
+
+  <ul class="grid items-center grid-cols-1 gap-x-16 gap-y-8 sm:grid-cols-3">
+    <li class="max-w-52"><img alt="Domain Group logo" src="https://www.planningalerts.org.au/assets/customers/domain-group-8dd1bdacdca8220933c199086a1f63fced31b417e398c2c3f55aeb54a87ed46b.svg" /></li>
+    <li class="max-w-52"><img alt="Property Dollar logo" src="https://www.planningalerts.org.au/assets/customers/property-dollar-1fc1eb42b64cfe19090a6e2c3d5f5f9de52e2b6cbb5547fb240605f275374e4b.png" /></li>
+    <li class="max-w-52"><img alt="Valocity logo" src="../assets/customers/valocity-2dbb011a7047f4486ce4c511babe6dfa10407e2512950582df6bd9d4acab4fc7.webp" /></li>
+    <li class="max-w-52"><img alt="Nurture Cloud logo" src="https://www.planningalerts.org.au/assets/customers/nurture-cloud-e3f1404aca664ae03e28121a8e444a3b20465028aef507fec92920ed8c06685c.svg" /></li>
+    <li class="max-w-52"><img alt="Yimby Melbourne logo" src="https://www.planningalerts.org.au/assets/customers/yimby-melbourne-997acc9d6e609da3ea5a94da9967c29e81aec89c84f8864dd77dfcc1a2914c8b.svg" /></li>
+  </ul>
+</section>
+
+<section class="pt-16 text-xl border-t text-navy border-light-grey2">
+  <h2 class="text-2xl font-bold text-navy font-display mb-6">
+    Trustworthy and up to date data
+</h2>
+  <div class="flex flex-col justify-between gap-8 sm:gap-16 sm:flex-row-reverse">
+    <div class="font-bold text-lavender font-display text-8xl shrink-0">
+      14 <span class="relative text-2xl top-3 -left-6">yrs</span>
+    </div>
+    <p class="max-w-2xl">
+      We've been doing this for more than 14 years with an extremely experienced team.
+      Leverage that for your own needs rather than trying to reinvent the wheel.
+    </p>
+  </div>
+</section>
+
+        </div>
+
+</div>
+    </main>
+    <footer class="bg-[#03827a] text-white font-sans text-lg leading-tight py-20">
+  <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+    <img class="w-60 mb-4" alt="Planning Alerts" src="https://www.planningalerts.org.au/assets/logo-white-0d636d754427d4f26ff92b7d17b65537336e67977524e9115e39b5640ab4124b.svg" width="240" height="32" />
+    <div class="grid grid-cols-12 gap-6 gap-y-8 md:gap-4">
+      <div class="col-span-12 md:col-span-5">
+        <div class="space-y-2">
+          <p>Find out what is being built and knocked down in your community and have your say.</p>
+          <p>A free Australian service run for the benefit of the general public.</p>
+        </div>
+      </div>
+
+      <div class="col-span-12 leading-normal md:col-span-4">
+        <nav class="grid grid-cols-1 gap-6 font-semibold md:gap-2 md:grid-cols-2">
+          <ul>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="../index.html">Home</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="../applications/address.html">Search</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="howto.html">API</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="../faq.html">Help</a></li>
+          </ul>
+          <ul>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="../about.html">About</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="../atdis/test.html">Get involved</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="../authorities.html">Coverage</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="https://github.com/openaustralia/planningalerts">Source code</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="../help/contact.html">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-span-12 p-6 border border-white md:col-span-3">
+        <div class="flex flex-col items-start gap-4">
+          <img alt="Illustration of love letter" src="https://www.planningalerts.org.au/assets/illustration/love-letter-8dabaff180fea6b88875acd5b9a23b89b1b794e08e0b98b64ddbc0439d4ae3a8.svg" width="68" height="52" />
+          <p>Your donations keep this site and others like it running</p>
+            <a class="font-semibold px-4 py-2 text-lg text-white bg-navy hover:text-navy hover:bg-white hover:ring-2 hover:ring-navy focus:outline-none focus:ring-4 focus:ring-sun-yellow inline-block" href="https://donate.planningalerts.org.au">
+    <div class="flex items-baseline justify-center gap-4">
+      <div>
+            Donate now
+</div>
+    </div>
+</a>        </div>
+      </div>
+    </div>
+
+</div>
+  <hr class="mt-12 text-[#479590]">
+  <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+    <div class="grid grid-cols-12 gap-4 pt-8 md:pt-16 row">
+      <div class="col-span-12 md:col-span-5">
+        <div>
+          <p>
+            Built and maintained by
+            <a href="https://www.oaf.org.au/" class="block h-6 mt-4 bg-no-repeat bg-oaf-logo focus:outline-none focus:ring-4 focus:ring-sun-yellow">
+              <span class="sr-only">OpenAustralia Foundation</span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-span-12 md:col-span-4">
+        <div class="space-y-8">
+          <p>
+            <a href="https://www.oaf.org.au/" class="text-white underline hover:opacity-80 focus:outline-none focus:bg-sun-yellow focus:text-navy">OpenAustralia Foundation</a> is a <a href="https://www.acnc.gov.au/charity/charities/6bf25724-39af-e811-a960-000d3ad24282/profile" class="text-white underline hover:opacity-80 focus:outline-none focus:bg-sun-yellow focus:text-navy">registered charity</a> in Australia - company limited by guarantee.
+            ABN&nbsp;<a href="https://www.abr.business.gov.au/ABN/View/24138089942" class="text-white underline hover:opacity-80 focus:outline-none focus:bg-sun-yellow focus:text-navy">24&nbsp;138&nbsp;089&nbsp;942</a>.
+          </p>
+          <p>
+            We acknowledge the traditional owners of the land now known as Australia.
+          We pay our respects to their elders past, present and emerging.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-start col-span-12 md:justify-end md:col-span-3">
+        <a class="inline-block focus:outline-none focus:ring-4 focus:ring-sun-yellow" href="https://www.acnc.gov.au/charity/charities/6bf25724-39af-e811-a960-000d3ad24282/profile">
+          <img alt="ACNC Registered Charity Tick" src="https://www.planningalerts.org.au/assets/charity-tick-80979eb45dfd041a327fa3957ebb1d3de7caaaca1431f7732583d1742c928a12.svg" width="100" height="100" />
+</a>      </div>
+    </div>
+
+</div>
+</footer>
+
+  </body>
+</html>

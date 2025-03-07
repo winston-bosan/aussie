@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+<title>
+    How to write a scraper | Planning Alerts
+</title>
+
+
+<script>
+window.dataLayer = window.dataLayer || [];
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQK6F2JF');</script>
+<!-- End Google Tag Manager -->
+
+  <script defer event-signed_in="false" data-domain="planningalerts.org.au" src="https://www.planningalerts.org.au/js/script.manual.outbound-links.pageview-props.js"></script>
+  <script>
+    window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+    plausible('pageview', { u: "https://www.planningalerts.org.au/how_to_write_a_scraper" + window.location.search });
+  </script>
+
+
+<link rel="stylesheet" href="https://www.planningalerts.org.au/assets/tailwind-418e4e7ba5a56a35a48890abd3758da737cd3ebaab76d5054b1f4bd3333f5bfe.css" data-turbo-track="reload" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Merriweather:wght@700;900&display=fallback" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.1" defer="defer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.5" defer="defer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js" defer="defer"></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer="defer"></script>
+<script src="https://www.planningalerts.org.au/assets/application-c409bfa5fcf9adbf5e93d0043c398374858f44ce2410272ae9e609f0505b4d79.js"></script>
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.planningalerts.org.au/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.planningalerts.org.au/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.planningalerts.org.au/favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<script>
+  (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+    key: "AIzaSyC_KnWssj4Y2lMPR_o53JcVO2SA6vHWJcU",
+    v: "weekly",
+    // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+    // Add other bootstrap parameters as needed, using camel case.
+    region: "au"
+  });
+</script>
+
+  </head>
+  <body x-data="{ bodyScrolling: true }" x-bind:class="{ 'overflow-hidden': !bodyScrolling}">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQK6F2JF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <header>
+  <div class="hidden bg-header-orange sm:block">
+    <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+      <div class="flex flex-row-reverse items-center h-8">
+        <a class="focus:outline-none focus:bg-sun-yellow p-1" href="https://www.oaf.org.au">
+          <div class="text-base font-medium tracking-wide text-dark-brown hover:text-dark-navy">
+              An <span class="underline">OpenAustralia Foundation</span> service
+          </div>
+</a>      </div>
+
+</div>
+  </div>
+  <div class="flex flex-col">
+    <div class="hidden py-8 sm:block bg-yellow bg-header-pattern xl:bg-center">
+      <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+        <a class="inline-block focus:outline-none focus:ring-4 focus:ring-sun-yellow" href="index.html">
+          <img alt="Planning Alerts. Email alerts of planning applications near you" src="https://www.planningalerts.org.au/assets/logo-b927c3a2b297503d11425efabc5af82195f5109f4cdcf5b1693529b10db1ab2e.svg" width="408" height="96" />
+</a>
+</div>
+    </div>
+    <div class="pt-10 pb-2 sm:bg-light-grey sm:py-0">
+      <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+        <nav aria-label="Main">
+          <div x-data="{ open: false }">
+  <button x-on:click="open = true; bodyScrolling = false" type="button" class="flex flex-row-reverse w-full h-16 text-sm rounded-lg group md:hidden focus:outline-none">
+    <div class="inline-flex flex-row-reverse items-center text-navy group-focus:bg-sun-yellow">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+
+      <span class="px-2 text-base font-medium">Menu</span>
+    </div>
+  </button>
+  <div x-show="open" x-cloak class="fixed top-0 left-0 z-50 w-full h-full py-24 overflow-y-scroll text-2xl text-navy bg-light-grey">
+    <div class="max-w-sm px-10 mx-auto">
+      <button x-on:click="open = false; bodyScrolling = true" class="inline-flex items-center focus:outline-none focus:bg-sun-yellow">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+        <span class="pr-2 text-lg font-medium">Close</span>
+      </button>
+      <img class="w-60" alt="Planning Alerts" src="https://www.planningalerts.org.au/assets/logo-navy-d89230356ec608b6c7598347fdb7bb7ace1f54a4464a2da24a619c230efe4590.svg" width="240" height="32" />
+      <div class="mt-8 font-medium">
+        <ul>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="index.html">Home</a></li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="applications/address.html">Search</a></li>
+          <li>
+            <a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="api/howto.html">
+              Planning Alerts API
+</a>          </li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="faq.html">Help</a></li>
+          <li class="mt-4"><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="about.html">About</a></li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="atdis/test.html">Get involved</a></li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="authorities.html">Coverage</a></li>
+          <li><a class="focus:outline-none focus:bg-sun-yellow" href="https://github.com/openaustralia/planningalerts">Source code</a></li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="help/contact.html">Contact us</a></li>
+          <li class="mt-4">
+              <a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="profile/alerts/new.html">Sign In</a>
+          </li>
+        </ul>
+      </div>
+      <p class="mt-10 text-lg font-regular">
+        Built and maintained by
+        <a href="https://www.oaf.org.au/" class="underline focus:outline-none focus:bg-sun-yellow">OpenAustralia Foundation</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+          <div class="hidden md:block">
+  <div class="flex justify-between h-16 text-xl font-medium text-navy">
+    <ul class="flex space-x-8">
+      <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-transparent hover:border-light-grey2" href="index.html">
+    <div class="m-auto">
+      Home
+    </div>
+</a></li>
+
+      <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-transparent hover:border-light-grey2" href="applications/address.html">
+    <div class="m-auto">
+      Search
+    </div>
+</a></li>
+
+      <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-transparent hover:border-light-grey2" href="api/howto.html">
+    <div class="m-auto">
+      
+        Planning Alerts API
+
+    </div>
+</a></li>
+      <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-transparent hover:border-light-grey2" href="faq.html">
+    <div class="m-auto">
+      Help
+    </div>
+</a></li>
+
+    </ul>
+    <ul class="flex">
+        <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-transparent hover:border-light-grey2" href="profile/alerts/new.html">
+    <div class="m-auto">
+      Sign In
+    </div>
+</a></li>
+
+    </ul>
+  </div>
+</div>
+
+        </nav>
+
+</div>
+    </div>
+    <div class="sm:hidden xl:bg-center">
+      <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+        <a class="inline-block focus:outline-none focus:bg-sun-yellow" href="index.html">
+          <img alt="Planning Alerts" src="https://www.planningalerts.org.au/assets/logo-navy-d89230356ec608b6c7598347fdb7bb7ace1f54a4464a2da24a619c230efe4590.svg" width="350" height="46" />
+</a>
+</div>
+    </div>
+  </div>
+</header>
+
+    <main>
+      <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+        
+        
+
+
+
+        <div class="mb-32 mt-9 sm:mt-16">
+          
+<h1 class="text-3xl font-bold text-navy font-display max-w-4xl">
+  How to write a scraper
+</h1>
+
+<section>
+  <h2 class="text-2xl font-bold text-navy font-display mt-12">What are scrapers?</h2>
+
+  <div class="flex flex-col items-start gap-8 mt-8 md:flex-row-reverse">
+    <img alt="" src="https://www.planningalerts.org.au/assets/illustration/explorer-fdb43c49eafd3f447ae2f5f820ded32c4be6d2cea7f3d4da421523afb48f23f6.svg" />
+    <div class="text-xl text-navy">
+      <p>
+        To be able to display and send alerts for planning applications, Planning Alerts needs to download applications from as many councils as possible. As the vast majority of councils don't supply the data in a reusable,
+        machine-readable format we need to write
+        <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline " href="https://secure.wikimedia.org/wikipedia/en/wiki/Web_scraping">web scrapers</a>
+        for each local government authority.
+      </p>
+      <p class="mt-4">
+        These scrapers fetch the data from council web pages and present it in a structured format so we can load it into
+        the Planning Alerts database.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="prose prose-xl prose-pre:bg-light-grey prose-pre:text-navy prose-pre:rounded-none prose-td:border-2 prose-td:border-white prose-td:bg-light-grey prose-td:px-4 prose-th:px-4 prose-th:py-3 prose-th:text-white prose-th:bg-navy prose-th:whitespace-nowrap max-w-none prose-h3:font-sans prose-h3:text-xl prose-h3:font-bold prose-h2:font-display prose-h2:text-2xl prose-h2:font-bold prose-a:underline prose-a:font-bold prose-a:text-fuchsia hover:prose-a:text-fuchsia-darker focus:prose-a:outline-none focus:prose-a:bg-sun-yellow prose-h1:text-3xl prose-h1:font-display prose-h1:font-bold prose-ul:pl-6 prose-li:pl-0 prose-li:my-0 prose-li:marker:text-navy">
+  
+  <section>
+    <h2>How can I help?</h2>
+    <p>
+      If you have some computer programming experience, you should be able to work out how to prepare a scraper for
+      Planning Alerts. All Planning Alerts scrapers are hosted on our <a href="https://morph.io/">morph.io</a>
+      scraping platform, which takes care of all the boring bits of scraping for you (well, most of the boring bits!).
+    </p>
+    <p>
+      The next thing to do is to decide what council to scrape. Once you've picked one, look it up on
+      our
+      <a href="https://docs.google.com/spreadsheet/ccc?key=0AmvYMal8CGUsdG1tM0lEWUctR194eGN6bUh0VGFfc1E">crowd-sourced list of councils</a>
+      and have a look at their published planning applications. Quickly double-check that the council isn't <a href="authorities.html">covered already</a>.
+    </p>
+    <p>
+      Some systems for displaying development applications on council websites are widely used. For most of those
+      we have already developed scrapers that are capable of scraping many authorities using the same system.
+      Check whether the council you want to scrape is using one of the systems
+      Masterview, Civica, Icon, ATDIS, Horizon, Technology One or Epathway.
+      We don't yet have good documentation on how to recognise these different systems but that's
+      something we want to create. Or maybe you can help?
+    </p>
+  </section>
+
+  <section>
+    <h2>An introduction to scraping with morph.io</h2>
+    <p>
+      With morph.io, you can choose to write your scraper in Ruby, Python, PHP or Perl so there's a good chance
+      you're already familiar an available programming language. Since all of the code is hosted on GitHub you're
+      probably also already familiar with how to share and collaborate on your scraper code.
+    </p>
+    <p>
+      morph.io provides great conveniences like taking care of saving your data, running your scraper regularly, and
+      emailing you when there's a problem.
+    </p>
+    <p>
+      You can find out more in the <a href="https://morph.io/documentation">morph.io documentation</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Now it's time to scrape</h2>
+    <p>
+      Make sure you have a <a href="https://github.com/join">GitHub account</a>, then you can use it to sign in to morph.io and
+      <a href="https://morph.io/scrapers/new">create a new scraper</a>
+      that downloads and saves the following information:
+    </p>
+    <section>
+      <h3>Required fields</h3>
+      <p>
+        The following fields are required. All development applications should have these bits of information.
+      </p>
+
+      <div class="overflow-x-auto">
+        <table>
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Example value</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>council_reference</td>
+              <td>TA/00323/2012</td>
+              <td>
+                The ID that the council has given the planning application. This also must be the unique key for this data set.
+              </td>
+            </tr>
+            <tr>
+              <td>address</td>
+              <td>1 Sowerby St, Goulburn, NSW</td>
+              <td>
+                The physical address that this application relates to. This will be geocoded so doesn't need to be a specific
+                format but obviously the more explicit it is the more likely it will be successfully geo-coded. If the original
+                address did not include the state (e.g. "QLD") at the end, then add it.
+              </td>
+            </tr>
+            <tr>
+              <td>description</td>
+              <td>Ground floor alterations to rear and first floor addition</td>
+              <td>
+                A text description of what the planning application seeks to carry out.
+              </td>
+            </tr>
+            <tr>
+              <td>info_url</td>
+              <td>https://foo.gov.au/app?key=527230</td>
+              <td>
+                A URL that provides more information about the planning application.
+                This should be a persistent URL that preferably is specific to this particular application. In many cases councils force
+                users to click through a license to access planning application. In this case be careful about what URL you provide.
+                Test clicking the link in a browser that hasn't established a session with the council's site to ensure users of Planning Alerts
+                will be able to click the link and not be presented with an error.
+              </td>
+            </tr>
+            <tr>
+              <td>date_scraped</td>
+              <td>2012-08-01</td>
+              <td>
+                The date that your scraper is collecting this data (i.e. now). Should be in
+                <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>
+                format.
+                Use the following Ruby code:
+                <code>Date.today.to_s</code>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Note that there used to be a field <code>comment_url</code>
+        above that was required. This is no longer used though you might
+        still see it referenced in older scrapers.
+      </p>
+    </section>
+    <section>
+      <h3>Optional fields</h3>
+      <p>
+        The following fields are optional because not every planning authority provides them. Please do include them if data is available.
+      </p>
+      <div class="overflow-x-auto">
+        <table>
+          <thead>
+            <tr>
+              <th>field</th>
+              <th>Example value</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>date_received</td>
+              <td>2012-06-23</td>
+              <td>
+                The date this application was received by council. Should be in
+                <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>
+                format.
+              </td>
+            </tr>
+            <tr>
+              <td>on_notice_from</td>
+              <td>2012-08-01</td>
+              <td>
+                The date from when public submissions can be made about this application. Should be in
+                <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>
+                format.
+              </td>
+            </tr>
+            <tr>
+              <td>on_notice_to</td>
+              <td>2012-08-14</td>
+              <td>
+                The date until when public submissions can be made about this application. Should be in
+                <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>
+                format.
+              </td>
+            </tr>
+            <tr>
+              <td>comment_email</td>
+              <td>foo@bar.com</td>
+              <td>
+                Only set this in
+                <strong>extremely unusual</strong>
+                situations. Allows each application in a single
+                planning authority to go to a different email address. This should never be set for 99.9%
+                of authorities as a single email address is used for all comments. Currently this is only
+                used for SA Planning Portal where comments are ideally sent back to the originating
+                local council so that the staff in state government don't have to do the redirection by hand.
+              </td>
+            </tr>
+            <tr>
+              <td>comment_authority</td>
+              <td>Acme Council</td>
+              <td>
+                Only set this in
+                <strong>extremely unusual</strong>
+                situations. Give the name associated with the comment_email address.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+
+  <section>
+    <h2>Versioning application data</h2>
+    <p>
+      It's important that scrapers collect the latest, most up-to-date, information. In fact,
+      if the information about an application changes (because, for instance, a council updates the
+      wording or corrects a mistake) your scraper should get the most up to date information.
+    </p>
+    <p>
+      For that reason, it's good practise for your scraper to look back a reasonable amount of
+      time (one month is good) in which you scrape all applications that might have changed in that
+      time. That way you're most likely to catch any changes. Often it's not possible to simply
+      get a list of applications that recently changed. Instead you have to scrape say a list
+      of applications that were recently received and applications that have recently been determined
+      (whether they're approved or not).
+    </p>
+    <p>
+      When you save an updated version of an application make sure you use the <code>council_reference</code>
+      field as the unique id. That way you don't end up with multiple versions of the same record.
+      If you're writing your scraper in Ruby that will look something like:
+    </p>
+    <pre><code>ScraperWiki.save_sqlite(['council_reference'], record)</code></pre>
+    <p>
+      When the main Planning Alerts system reads the latest application data from your
+      scraper on morph.io it automatically keeps track of the changes that occur
+      on indidivual applications. That way you can make sure that nothing truly gets
+      overwritten. There is always a history of what fields changed when. At the moment
+      this information is recorded in the database but isn't yet exposed to users in
+      the main application or through the data published through the API.
+    </p>
+    <p>
+      If you get stuck, have a look at
+      <a href="https://morph.io/planningalerts-scrapers">the scrapers already written for Planning Alerts</a>
+      and
+      <a href="https://help.morph.io/">post on the morph.io forum</a>
+      if you have any questions.
+    </p>
+  </section>
+
+  <section>
+    <h2>Scheduling the scraper</h2>
+    <p>
+      Set the scraper to run once per day. This can be done on morph.io on the settings page of the scraper.
+    </p>
+  </section>
+
+  <section>
+    <h2>Finishing up</h2>
+    <p>
+      Once you've finished your scraper and it's successfully downloading planning applications,
+      <a href="help/contact.html">contact us</a>
+      and we'll fork it into the
+      <a href="https://morph.io/planningalerts-scrapers">planningalerts-scrapers organization</a>
+      and import it into Planning Alerts.
+    </p>
+    <p>
+      The last thing to do is look up on Wikipedia how many people live within the council you've just covered so you can
+      pat yourself on the back knowing that you've just helped tens of thousands of people get Planning Alerts.
+    </p>
+  </section>
+
+</div>
+
+        </div>
+
+</div>
+    </main>
+    <footer class="bg-[#03827a] text-white font-sans text-lg leading-tight py-20">
+  <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+    <img class="w-60 mb-4" alt="Planning Alerts" src="https://www.planningalerts.org.au/assets/logo-white-0d636d754427d4f26ff92b7d17b65537336e67977524e9115e39b5640ab4124b.svg" width="240" height="32" />
+    <div class="grid grid-cols-12 gap-6 gap-y-8 md:gap-4">
+      <div class="col-span-12 md:col-span-5">
+        <div class="space-y-2">
+          <p>Find out what is being built and knocked down in your community and have your say.</p>
+          <p>A free Australian service run for the benefit of the general public.</p>
+        </div>
+      </div>
+
+      <div class="col-span-12 leading-normal md:col-span-4">
+        <nav class="grid grid-cols-1 gap-6 font-semibold md:gap-2 md:grid-cols-2">
+          <ul>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="index.html">Home</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="applications/address.html">Search</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="api/howto.html">API</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="faq.html">Help</a></li>
+          </ul>
+          <ul>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="about.html">About</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="atdis/test.html">Get involved</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="authorities.html">Coverage</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="https://github.com/openaustralia/planningalerts">Source code</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="help/contact.html">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-span-12 p-6 border border-white md:col-span-3">
+        <div class="flex flex-col items-start gap-4">
+          <img alt="Illustration of love letter" src="https://www.planningalerts.org.au/assets/illustration/love-letter-8dabaff180fea6b88875acd5b9a23b89b1b794e08e0b98b64ddbc0439d4ae3a8.svg" width="68" height="52" />
+          <p>Your donations keep this site and others like it running</p>
+            <a class="font-semibold px-4 py-2 text-lg text-white bg-navy hover:text-navy hover:bg-white hover:ring-2 hover:ring-navy focus:outline-none focus:ring-4 focus:ring-sun-yellow inline-block" href="https://donate.planningalerts.org.au">
+    <div class="flex items-baseline justify-center gap-4">
+      <div>
+            Donate now
+</div>
+    </div>
+</a>        </div>
+      </div>
+    </div>
+
+</div>
+  <hr class="mt-12 text-[#479590]">
+  <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+    <div class="grid grid-cols-12 gap-4 pt-8 md:pt-16 row">
+      <div class="col-span-12 md:col-span-5">
+        <div>
+          <p>
+            Built and maintained by
+            <a href="https://www.oaf.org.au/" class="block h-6 mt-4 bg-no-repeat bg-oaf-logo focus:outline-none focus:ring-4 focus:ring-sun-yellow">
+              <span class="sr-only">OpenAustralia Foundation</span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-span-12 md:col-span-4">
+        <div class="space-y-8">
+          <p>
+            <a href="https://www.oaf.org.au/" class="text-white underline hover:opacity-80 focus:outline-none focus:bg-sun-yellow focus:text-navy">OpenAustralia Foundation</a> is a <a href="https://www.acnc.gov.au/charity/charities/6bf25724-39af-e811-a960-000d3ad24282/profile" class="text-white underline hover:opacity-80 focus:outline-none focus:bg-sun-yellow focus:text-navy">registered charity</a> in Australia - company limited by guarantee.
+            ABN&nbsp;<a href="https://www.abr.business.gov.au/ABN/View/24138089942" class="text-white underline hover:opacity-80 focus:outline-none focus:bg-sun-yellow focus:text-navy">24&nbsp;138&nbsp;089&nbsp;942</a>.
+          </p>
+          <p>
+            We acknowledge the traditional owners of the land now known as Australia.
+          We pay our respects to their elders past, present and emerging.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-start col-span-12 md:justify-end md:col-span-3">
+        <a class="inline-block focus:outline-none focus:ring-4 focus:ring-sun-yellow" href="https://www.acnc.gov.au/charity/charities/6bf25724-39af-e811-a960-000d3ad24282/profile">
+          <img alt="ACNC Registered Charity Tick" src="https://www.planningalerts.org.au/assets/charity-tick-80979eb45dfd041a327fa3957ebb1d3de7caaaca1431f7732583d1742c928a12.svg" width="100" height="100" />
+</a>      </div>
+    </div>
+
+</div>
+</footer>
+
+  </body>
+</html>

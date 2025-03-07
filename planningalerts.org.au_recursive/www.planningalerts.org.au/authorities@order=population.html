@@ -1,0 +1,2622 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+<title>
+    Coverage | Planning Alerts
+</title>
+
+
+<script>
+window.dataLayer = window.dataLayer || [];
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQK6F2JF');</script>
+<!-- End Google Tag Manager -->
+
+  <script defer event-signed_in="false" data-domain="planningalerts.org.au" src="https://www.planningalerts.org.au/js/script.manual.outbound-links.pageview-props.js"></script>
+  <script>
+    window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+    plausible('pageview', { u: "https://www.planningalerts.org.au/authorities" + window.location.search });
+  </script>
+
+
+<link rel="stylesheet" href="https://www.planningalerts.org.au/assets/tailwind-418e4e7ba5a56a35a48890abd3758da737cd3ebaab76d5054b1f4bd3333f5bfe.css" data-turbo-track="reload" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Merriweather:wght@700;900&display=fallback" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.1" defer="defer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.5" defer="defer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js" defer="defer"></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer="defer"></script>
+<script src="https://www.planningalerts.org.au/assets/application-c409bfa5fcf9adbf5e93d0043c398374858f44ce2410272ae9e609f0505b4d79.js"></script>
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.planningalerts.org.au/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.planningalerts.org.au/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.planningalerts.org.au/favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<script>
+  (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+    key: "AIzaSyC_KnWssj4Y2lMPR_o53JcVO2SA6vHWJcU",
+    v: "weekly",
+    // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+    // Add other bootstrap parameters as needed, using camel case.
+    region: "au"
+  });
+</script>
+
+  </head>
+  <body x-data="{ bodyScrolling: true }" x-bind:class="{ 'overflow-hidden': !bodyScrolling}">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQK6F2JF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <header>
+  <div class="hidden bg-header-orange sm:block">
+    <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+      <div class="flex flex-row-reverse items-center h-8">
+        <a class="focus:outline-none focus:bg-sun-yellow p-1" href="https://www.oaf.org.au">
+          <div class="text-base font-medium tracking-wide text-dark-brown hover:text-dark-navy">
+              An <span class="underline">OpenAustralia Foundation</span> service
+          </div>
+</a>      </div>
+
+</div>
+  </div>
+  <div class="flex flex-col">
+    <div class="hidden py-8 sm:block bg-yellow bg-header-pattern xl:bg-center">
+      <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+        <a class="inline-block focus:outline-none focus:ring-4 focus:ring-sun-yellow" href="index.html">
+          <img alt="Planning Alerts. Email alerts of planning applications near you" src="https://www.planningalerts.org.au/assets/logo-b927c3a2b297503d11425efabc5af82195f5109f4cdcf5b1693529b10db1ab2e.svg" width="408" height="96" />
+</a>
+</div>
+    </div>
+    <div class="pt-10 pb-2 sm:bg-light-grey sm:py-0">
+      <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+        <nav aria-label="Main">
+          <div x-data="{ open: false }">
+  <button x-on:click="open = true; bodyScrolling = false" type="button" class="flex flex-row-reverse w-full h-16 text-sm rounded-lg group md:hidden focus:outline-none">
+    <div class="inline-flex flex-row-reverse items-center text-navy group-focus:bg-sun-yellow">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+
+      <span class="px-2 text-base font-medium">Menu</span>
+    </div>
+  </button>
+  <div x-show="open" x-cloak class="fixed top-0 left-0 z-50 w-full h-full py-24 overflow-y-scroll text-2xl text-navy bg-light-grey">
+    <div class="max-w-sm px-10 mx-auto">
+      <button x-on:click="open = false; bodyScrolling = true" class="inline-flex items-center focus:outline-none focus:bg-sun-yellow">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+        <span class="pr-2 text-lg font-medium">Close</span>
+      </button>
+      <img class="w-60" alt="Planning Alerts" src="https://www.planningalerts.org.au/assets/logo-navy-d89230356ec608b6c7598347fdb7bb7ace1f54a4464a2da24a619c230efe4590.svg" width="240" height="32" />
+      <div class="mt-8 font-medium">
+        <ul>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="index.html">Home</a></li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="applications/address.html">Search</a></li>
+          <li>
+            <a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="api/howto.html">
+              Planning Alerts API
+</a>          </li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="faq.html">Help</a></li>
+          <li class="mt-4"><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="about.html">About</a></li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="atdis/test.html">Get involved</a></li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow underline" href="authorities.html">Coverage</a></li>
+          <li><a class="focus:outline-none focus:bg-sun-yellow" href="https://github.com/openaustralia/planningalerts">Source code</a></li>
+          <li><a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="help/contact.html">Contact us</a></li>
+          <li class="mt-4">
+              <a class="decoration-fuchsia decoration-4 focus:outline-none focus:bg-sun-yellow" href="profile/alerts/new.html">Sign In</a>
+          </li>
+        </ul>
+      </div>
+      <p class="mt-10 text-lg font-regular">
+        Built and maintained by
+        <a href="https://www.oaf.org.au/" class="underline focus:outline-none focus:bg-sun-yellow">OpenAustralia Foundation</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+          <div class="hidden md:block">
+  <div class="flex justify-between h-16 text-xl font-medium text-navy">
+    <ul class="flex space-x-8">
+      <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-transparent hover:border-light-grey2" href="index.html">
+    <div class="m-auto">
+      Home
+    </div>
+</a></li>
+
+      <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-transparent hover:border-light-grey2" href="applications/address.html">
+    <div class="m-auto">
+      Search
+    </div>
+</a></li>
+
+      <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-transparent hover:border-light-grey2" href="api/howto.html">
+    <div class="m-auto">
+      
+        Planning Alerts API
+
+    </div>
+</a></li>
+      <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-transparent hover:border-light-grey2" href="faq.html">
+    <div class="m-auto">
+      Help
+    </div>
+</a></li>
+
+    </ul>
+    <ul class="flex">
+        <li>
+  <a class="inline-block px-1 h-full flex border-b-4 focus:bg-yellow focus:outline-none border-transparent hover:border-light-grey2" href="profile/alerts/new.html">
+    <div class="m-auto">
+      Sign In
+    </div>
+</a></li>
+
+    </ul>
+  </div>
+</div>
+
+        </nav>
+
+</div>
+    </div>
+    <div class="sm:hidden xl:bg-center">
+      <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+        <a class="inline-block focus:outline-none focus:bg-sun-yellow" href="index.html">
+          <img alt="Planning Alerts" src="https://www.planningalerts.org.au/assets/logo-navy-d89230356ec608b6c7598347fdb7bb7ace1f54a4464a2da24a619c230efe4590.svg" width="350" height="46" />
+</a>
+</div>
+    </div>
+  </div>
+</header>
+
+    <main>
+      <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+        
+        
+
+
+
+        <div class="mb-32 mt-9 sm:mt-16">
+          
+<h1 class="text-3xl font-bold text-navy font-display max-w-4xl">
+  Coverage
+</h1>
+
+<div class="flex flex-col justify-between gap-8 mt-12 md:flex-row-reverse">
+  <div class="shrink-0">
+    <div class="relative font-black text-7xl font-display text-warm-grey">
+  <img alt="" src="https://www.planningalerts.org.au/assets/illustration/coverage-b1e9ccfb93da7ffdb0afed95f829fd86fedcfbc26c23839e973c08818277f650.svg" />
+  <div class="absolute left-16 top-14">
+    86<span class="text-4xl">%</span>
+  </div>
+</div>
+
+  </div>
+  <div class="max-w-2xl">
+    <p class="text-xl text-navy">
+  We currently cover 86% of Australia's population
+  within 194 authorities.
+  For this number we're only counting places where the main planning authority is covered.
+  As an example, most of Victoria is covered by the SPEAR system but not all Victorian planning
+  applications go through it. So, we don't include SPEAR in our population count.
+</p>
+
+    <p class="mt-4 text-xl text-navy">
+      We don't yet cover the whole country, but we are working on it.
+      New authorities are being added all the time, so if your local authority isn't listed below
+      <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline " href="profile/alerts/new.html">sign up anyway</a> and you'll start receiving alerts once it has been included.
+    </p>
+  </div>
+</div>
+
+<div class="mt-8 border-t divide-y divide-light-grey2 border-light-grey2">
+  <section class="py-12">
+    <h2 class="text-2xl font-bold text-navy font-display">
+      Where does application data come from?
+</h2>
+    <p class="mt-4 text-xl text-navy">
+      To be able to display and send alerts for planning applications,
+      Planning Alerts needs to download applications from as many councils as possible.
+      As the vast majority of councils don't supply the data in a reusable, machine-readable format
+      we write web scrapers for each local government authority. These scrapers fetch the data from
+      council web pages and present it in a structured format so we can load it into the
+      Planning Alerts database.
+    </p>
+    <div class="flex flex-col items-start gap-8 mt-12 sm:flex-row">
+      <img alt="" src="https://www.planningalerts.org.au/assets/illustration/headshot1-f1df55a7df4adf4cc8d2f0b2436a9163d4e19c86fa5e313acb37ffe4114df9f7.svg" />
+      <p class="max-w-2xl text-xl text-navy">
+        If you are a programmer and would like to write a scraper for your local authority
+        <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline " href="how_to_write_a_scraper.html">read our guide on writing scrapers</a>.
+      </p>
+    </div>
+    <div class="flex flex-col items-start gap-8 mt-8 sm:flex-row">
+      <img alt="" src="https://www.planningalerts.org.au/assets/illustration/headshot4-bc907ee4a80a76961572003e7018ffd0db3d9ab6266fda6b003d9d534fa3ae2d.svg" />
+      <p class="max-w-2xl text-xl text-navy">
+        If you work for a local authority and would like to make your data available we highly
+        recommend using the
+        <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline " href="atdis/test.html">Application Tracking Data Interchange Specification (ATDIS)</a>.
+      </p>
+    </div>
+  </section>
+  <section class="py-12">
+    <h2 class="text-2xl font-bold text-navy font-display">
+      Data reliability
+</h2>
+    <p class="mt-4 text-xl text-navy">
+      From time to time planning authorities change their websites which breaks the scrapers that gather the planning
+      data. Here is a complete list of all the planning authorities we source data from and their status.
+
+      <dl class="flex flex-col gap-2 p-6 mt-8 text-xl border text-navy border-navy">
+        <dt class="shrink-0">
+          <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+        </dt>
+        <dd>
+          Authorities marked like this means we haven't received planning data
+          from them for a while so something is wrong, possibly a broken scraper.
+        </dd>
+      </dl>
+    </p>
+
+    <table class="w-full mt-8 text-base text-left md:text-xl text-navy">
+      <thead>
+        <tr>
+          <th class="pb-6 pr-8 whitespace-nowrap">
+            <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline " title="Sort by state and authority" href="authorities.html">State</a>
+          </th>
+          <th class="pb-6 pr-4 whitespace-nowrap">
+            <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline " title="Sort by state and authority" href="authorities.html">Authority</a>
+          </th>
+          <th class="pb-6 whitespace-nowrap">
+            <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline " title="Sort by population (2021 census)" href="authorities@order=population.html">Population</a>
+              <img alt="Currently sorted by" class="inline-block" src="https://www.planningalerts.org.au/assets/down-arrow-dc54f97892d8c6601f9db1414edc84b7676158c90e48a80d4ff0edbe35ea9e28.svg" />
+          </th>
+        </tr>
+      </thead>
+      <tbody class="align-top">
+        <tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/nsw_dop.html">NSW Department of Planning Major Project Assessments</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/nsw_olgr.html">NSW Independent Liquor and Gaming Authority</a>
+  </td>
+  <td>
+    
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/nsw_jrpp.html">NSW Sydney and Regional Planning Panels</a>
+  </td>
+  <td>
+    
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/spear_victoria.html">Streamlined Planning through Electronic Applications and Referrals</a>
+  </td>
+  <td>
+    
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/vcglr.html">Victorian Gambling and Casino Control Commission</a>
+  </td>
+  <td>
+    
+  </td>
+</tr>
+<tr>
+  <td>
+    WA
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/daps_wa.html">Development Assessment Panels</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    
+  </td>
+</tr>
+<tr>
+  <td>
+    SA
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/saplanningportal.html">South Australia Planning Portal</a>
+  </td>
+  <td>
+    1781516
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/brisbane.html">Brisbane City Council</a>
+  </td>
+  <td>
+    1242825
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/gold_coast.html">Gold Coast City Council</a>
+  </td>
+  <td>
+    625087
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/moreton_bay.html">Moreton Bay Regional Council</a>
+  </td>
+  <td>
+    476340
+  </td>
+</tr>
+<tr>
+  <td>
+    ACT
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/act.html">ACT Planning &amp; Land Authority</a>
+  </td>
+  <td>
+    454499
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/blacktown.html">Blacktown City Council</a>
+  </td>
+  <td>
+    396776
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/bankstown.html">Canterbury-Bankstown Council</a>
+  </td>
+  <td>
+    371006
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/casey.html">Casey City Council</a>
+  </td>
+  <td>
+    365239
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/wyong.html">Central Coast Council</a>
+  </td>
+  <td>
+    346596
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/logan.html">Logan City Council</a>
+  </td>
+  <td>
+    345098
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/sunshine_coast.html">Sunshine Coast Regional Council</a>
+  </td>
+  <td>
+    342541
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/wyndham.html">Wyndham City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    292011
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/geelong_city.html">City of Greater Geelong</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    271057
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/northern_beaches.html">Northern Beaches Council</a>
+  </td>
+  <td>
+    263554
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/parramatta.html">Parramatta City Council</a>
+  </td>
+  <td>
+    256729
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/hume_city_council.html">Hume City Council</a>
+  </td>
+  <td>
+    243901
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/cumberland.html">Cumberland Council</a>
+  </td>
+  <td>
+    235439
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/liverpool.html">Liverpool City Council</a>
+  </td>
+  <td>
+    233446
+  </td>
+</tr>
+<tr>
+  <td>
+    NT
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/northern_territory.html">Northern Territory Land Information System</a>
+  </td>
+  <td>
+    232605
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/sutherland.html">Sutherland Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    230211
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/city_of_whittlesea.html">City of Whittlesea</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    229396
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/ipswich.html">Ipswich City Council</a>
+  </td>
+  <td>
+    229208
+  </td>
+</tr>
+<tr>
+  <td>
+    WA
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/stirling.html">City of Stirling</a>
+  </td>
+  <td>
+    226369
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/penrith.html">Penrith City Council</a>
+  </td>
+  <td>
+    217664
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/wollongong.html">Wollongong City Council</a>
+  </td>
+  <td>
+    214564
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/lake_macquarie.html">Lake Macquarie City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    213845
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/sydney.html">City of Sydney</a>
+  </td>
+  <td>
+    211632
+  </td>
+</tr>
+<tr>
+  <td>
+    WA
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/wanneroo.html">City of Wanneroo</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    209111
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/fairfield.html">Fairfield City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    208475
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/brimbank.html">Brimbank City Council</a>
+  </td>
+  <td>
+    194618
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/townsville.html">Townsville City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    192768
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/the_hills.html">The Hills Shire Council</a>
+  </td>
+  <td>
+    191876
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/monash.html">Monash City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    190397
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/inner_west.html">Inner West Council</a>
+  </td>
+  <td>
+    182818
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/campbelltown.html">Campbelltown City Council</a>
+  </td>
+  <td>
+    176519
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/bayside.html">Bayside Council</a>
+  </td>
+  <td>
+    175184
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/toowoomba.html">Toowoomba Regional Council</a>
+  </td>
+  <td>
+    173204
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/moreland_city.html">Moreland City Council</a>
+  </td>
+  <td>
+    171357
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/whitehorse.html">Whitehorse City Council</a>
+  </td>
+  <td>
+    169346
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/mornington_peninsula.html">Mornington Peninsula Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    168948
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/newcastle.html">The City of Newcastle</a>
+  </td>
+  <td>
+    168873
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/boroondara_city.html">Boroondara City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    167900
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/cairns.html">Cairns Regional Council</a>
+  </td>
+  <td>
+    166943
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/redland.html">Redland City Council</a>
+  </td>
+  <td>
+    159222
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/knox.html">Knox City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    159103
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/kingston.html">Kingston City Council</a>
+  </td>
+  <td>
+    158129
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/yarra_ranges.html">Yarra Ranges Shire Council</a>
+  </td>
+  <td>
+    156068
+  </td>
+</tr>
+<tr>
+  <td>
+    WA
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/swan.html">Swan City Council</a>
+  </td>
+  <td>
+    152974
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/georgesriver.html">Georges River Council</a>
+  </td>
+  <td>
+    152274
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/hornsby.html">Hornsby Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    151811
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/melbourne_city.html">Melbourne City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    149615
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/glen_eira.html">City of Glen Eira</a>
+  </td>
+  <td>
+    148908
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/darebin.html">Darebin City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    148570
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/frankston_city.html">Frankston City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    139281
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/randwick.html">Randwick City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    134252
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/ryde.html">City of Ryde</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    129123
+  </td>
+</tr>
+<tr>
+  <td>
+    WA
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/gosnells.html">City of Gosnells</a>
+  </td>
+  <td>
+    126376
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/banyule.html">Banyule City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    126236
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/manningham.html">Manningham City Council</a>
+  </td>
+  <td>
+    124700
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/kuringgai.html">Ku-ring-gai Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    124076
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/mooney_valley.html">City of Moonee Valley</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    121851
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/mackay.html">Mackay Regional Council</a>
+  </td>
+  <td>
+    121691
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/greater_bendigo.html">City of Greater Bendigo</a>
+  </td>
+  <td>
+    121470
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/camden.html">Camden Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    119325
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/cardinia.html">Cardinia Shire Council</a>
+  </td>
+  <td>
+    118194
+  </td>
+</tr>
+<tr>
+  <td>
+    WA
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/cockburn.html">City of Cockburn</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    118091
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/maroondah_city.html">Maroondah City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    115043
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/ballarat_city.html">Ballarat City Council</a>
+  </td>
+  <td>
+    113763
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/fraser_coast.html">Fraser Coast Regional Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    111032
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/shoalhaven.html">Shoalhaven City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    108531
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/stonnington.html">City of Stonnington</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    104703
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/city_of_port_phillip.html">City of Port Phillip</a>
+  </td>
+  <td>
+    101942
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/bayside_vic.html">Bayside City Council (Victoria)</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    101306
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/bundaberg.html">Bundaberg Regional Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    99215
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/tweed_shire.html">Tweed Shire Council</a>
+  </td>
+  <td>
+    97392
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/mid_coast.html">Mid-Coast Council</a>
+  </td>
+  <td>
+    96579
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/hobsons_bay.html">Hobsons Bay City Council</a>
+  </td>
+  <td>
+    91322
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/maitland.html">Maitland City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    90226
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/yarra_city.html">Yarra City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    90114
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/canada_bay.html">City of Canada Bay</a>
+  </td>
+  <td>
+    89177
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/port_macquarie_hastings.html">Port Macquarie-Hastings Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    86762
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/rockhampton.html">Rockhampton Regional Council</a>
+  </td>
+  <td>
+    81968
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/coffs_harbour.html">Coffs Harbour City Council</a>
+  </td>
+  <td>
+    78759
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/blue_mountains.html">Blue Mountains City Council</a>
+  </td>
+  <td>
+    78121
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/latrobe.html">Latrobe City Council</a>
+  </td>
+  <td>
+    77318
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/shellharbour.html">Shellharbour City Council</a>
+  </td>
+  <td>
+    76271
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/willoughby.html">Willoughby City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    75613
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/port_stephens.html">Port Stephens Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    75276
+  </td>
+</tr>
+<tr>
+  <td>
+    TAS
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/launceston.html">Launceston City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    70055
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/north_sydney.html">North Sydney Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    68950
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/waverley.html">Waverley Council</a>
+  </td>
+  <td>
+    68605
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/greater_shepparton.html">Greater Shepparton City Council</a>
+  </td>
+  <td>
+    68409
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/wagga_wagga.html">City of Wagga Wagga</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    67609
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/hawkesbury.html">Hawkesbury City Council</a>
+  </td>
+  <td>
+    67207
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/cessnock.html">Cessnock City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    63632
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/gladstone.html">Gladstone Regional Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    63515
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/qprc.html">Queanbeyan-Palerang Regional Council</a>
+  </td>
+  <td>
+    63304
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/tamworth.html">Tamworth Regional Council</a>
+  </td>
+  <td>
+    63070
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/nillumbik.html">Nillumbik Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    62895
+  </td>
+</tr>
+<tr>
+  <td>
+    TAS
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/clarence.html">Clarence City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    61531
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/baw_baw.html">Baw Baw Shire Council</a>
+  </td>
+  <td>
+    57626
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/noosa.html">Noosa Shire Council</a>
+  </td>
+  <td>
+    56298
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/albury.html">Albury City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    56093
+  </td>
+</tr>
+<tr>
+  <td>
+    TAS
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/hobart.html">Hobart City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    55077
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/dubbo.html">Dubbo Regional Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    54922
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/wollondilly_shire.html">Wollondilly Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    53961
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/woollahra.html">Woollahra Municipal Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    53496
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/gympie.html">Gympie Regional Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    53242
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/wingecarribee.html">Wingecarribee Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    52709
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/macedon_ranges.html">Macedon Ranges Shire Council</a>
+  </td>
+  <td>
+    51458
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/east_gippsland.html">East Gippsland Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    48715
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/ballina.html">Ballina Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    46296
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/strathfield.html">Strathfield Municipal Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    45593
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/lismore.html">City of Lismore</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    44334
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/bathurst.html">Bathurst Regional Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    43567
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/orange.html">Orange City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    43512
+  </td>
+</tr>
+<tr>
+  <td>
+    WA
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/south_perth.html">City of South Perth</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    43405
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/scenic_rim.html">Scenic Rim Regional Council</a>
+  </td>
+  <td>
+    42984
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/lockyer_valley.html">Lockyer Valley Regional Council</a>
+  </td>
+  <td>
+    41101
+  </td>
+</tr>
+<tr>
+  <td>
+    WA
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/busselton.html">City of Busselton</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    40640
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/eurobodalla.html">Eurobodalla Shire Council</a>
+  </td>
+  <td>
+    40593
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/burwood.html">Burwood Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    40217
+  </td>
+</tr>
+<tr>
+  <td>
+    TAS
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/kingborough.html">Kingborough Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    40082
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/lane_cove.html">Lane Cove Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    39438
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/livingstone.html">Livingstone Shire Council</a>
+  </td>
+  <td>
+    39398
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/campaspe_shire.html">Campaspe Shire Council</a>
+  </td>
+  <td>
+    38735
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/surf_coast_shire.html">Surf Coast Shire Council</a>
+  </td>
+  <td>
+    37694
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/moorabool.html">Moorabool Shire Council</a>
+  </td>
+  <td>
+    37632
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/whitsunday.html">Whitsunday Regional Council</a>
+  </td>
+  <td>
+    37152
+  </td>
+</tr>
+<tr>
+  <td>
+    WA
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/vincent.html">Vincent City Council</a>
+  </td>
+  <td>
+    36537
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/southern_downs.html">Southern Downs Regional Council</a>
+  </td>
+  <td>
+    36290
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/byron.html">Byron Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    36116
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/bega.html">Bega Valley Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    35942
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/western_downs.html">Western Downs Regional Council</a>
+  </td>
+  <td>
+    33843
+  </td>
+</tr>
+<tr>
+  <td>
+    WA
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/bunbury.html">City of Bunbury</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    32987
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/goulburn.html">Goulburn Mulwaree Council</a>
+  </td>
+  <td>
+    32053
+  </td>
+</tr>
+<tr>
+  <td>
+    WA
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/fremantle.html">Fremantle City Council</a>
+  </td>
+  <td>
+    31930
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/kempsey.html">Kempsey Shire Council</a>
+  </td>
+  <td>
+    30688
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/south_gippsland_shire.html">South Gippsland Shire Council</a>
+  </td>
+  <td>
+    30577
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/rural_city_of_wangaratta.html">Rural City of Wangaratta</a>
+  </td>
+  <td>
+    29808
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/cassowary_coast.html">Cassowary Coast Regional Council</a>
+  </td>
+  <td>
+    29157
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/armidale.html">Armidale Regional Council</a>
+  </td>
+  <td>
+    29124
+  </td>
+</tr>
+<tr>
+  <td>
+    WA
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/perth.html">City of Perth</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    28463
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/mosman.html">Mosman Municipal Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    28329
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/central_highlands.html">Central Highlands Regional Council</a>
+  </td>
+  <td>
+    27836
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/griffith.html">Griffith City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    27086
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/midwestern.html">Mid-Western Regional Council</a>
+  </td>
+  <td>
+    25713
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/golden_plains_shire.html">Golden Plains Shire Council</a>
+  </td>
+  <td>
+    24985
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/singleton.html">Singleton Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    24577
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/richmond_valley.html">Richmond Valley Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    23565
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/kiama.html">Kiama Municipal Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    23074
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/swan_hill.html">Swan Hill Rural City Council</a>
+  </td>
+  <td>
+    21403
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/lithgow.html">Lithgow City Council</a>
+  </td>
+  <td>
+    20842
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/horsham.html">Horsham Rural City Council</a>
+  </td>
+  <td>
+    20429
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/nambucca.html">Nambucca Valley Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    20407
+  </td>
+</tr>
+<tr>
+  <td>
+    TAS
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/huon_valley.html">Huon Valley Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    18259
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/inverell.html">Inverell Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    17853
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/broken_hill.html">Broken Hill City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    17588
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/yass.html">Yass Valley Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    17281
+  </td>
+</tr>
+<tr>
+  <td>
+    TAS
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/sorell.html">Sorell Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    16734
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/burdekin.html">Burdekin Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    16692
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/muswellbrook.html">Muswellbrook Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    16357
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/corangamite.html">Corangamite Shire</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    16115
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/parkes.html">Parkes Shire Council</a>
+  </td>
+  <td>
+    14361
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/upper_hunter.html">Upper Hunter Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    14229
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/bellingen.html">Bellingen Shire Council</a>
+  </td>
+  <td>
+    13253
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/gunnedah.html">Gunnedah Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    12929
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/maranoa.html">Maranoa Regional Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    12825
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/cowra.html">Cowra Council</a>
+  </td>
+  <td>
+    12724
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/ararat_council.html">Ararat Rural City Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    11880
+  </td>
+</tr>
+<tr>
+  <td>
+    QLD
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/charters_towers.html">Charters Towers Regional Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    11794
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/leeton.html">Leeton Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    11452
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/cootamundra_gundagai.html">Cootamundra Gundagai Regional Council </a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    11403
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/greater_hume.html">Greater Hume Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    11157
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/gannawarra.html">Gannawarra Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    10683
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/kyogle.html">Kyogle Council</a>
+  </td>
+  <td>
+    9359
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/forbes.html">Forbes Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    9319
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/warrumbungle.html">Warrumbungle Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    9225
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/berrigan.html">Berrigan Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    8665
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/pyrenees.html">Pyrenees Shire Council</a>
+  </td>
+  <td>
+    7671
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/liverpool_plains.html">Liverpool Plains Shire Council</a>
+  </td>
+  <td>
+    7551
+  </td>
+</tr>
+<tr>
+  <td>
+    TAS
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/dorset.html">Dorset Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    6829
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/uralla.html">Uralla Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    5971
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/walgett.html">Walgett Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    5253
+  </td>
+</tr>
+<tr>
+  <td>
+    VIC
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/west_wimmera.html">West Wimmera Shire Council</a>
+  </td>
+  <td>
+    4006
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/weddin.html">Weddin Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    3608
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/walcha.html">Walcha Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    3016
+  </td>
+</tr>
+<tr>
+  <td>
+    NSW
+  </td>
+  <td class="pr-4">
+    <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline mr-2" href="authorities/bogan.html">Bogan Shire Council</a>
+      <div class="inline-block px-1 bg-yellow">Possibly broken</div>
+  </td>
+  <td>
+    2467
+  </td>
+</tr>
+
+      </tbody>
+    </table>
+  </section>
+</div>
+
+        </div>
+
+</div>
+    </main>
+    <footer class="bg-[#03827a] text-white font-sans text-lg leading-tight py-20">
+  <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+    <img class="w-60 mb-4" alt="Planning Alerts" src="https://www.planningalerts.org.au/assets/logo-white-0d636d754427d4f26ff92b7d17b65537336e67977524e9115e39b5640ab4124b.svg" width="240" height="32" />
+    <div class="grid grid-cols-12 gap-6 gap-y-8 md:gap-4">
+      <div class="col-span-12 md:col-span-5">
+        <div class="space-y-2">
+          <p>Find out what is being built and knocked down in your community and have your say.</p>
+          <p>A free Australian service run for the benefit of the general public.</p>
+        </div>
+      </div>
+
+      <div class="col-span-12 leading-normal md:col-span-4">
+        <nav class="grid grid-cols-1 gap-6 font-semibold md:gap-2 md:grid-cols-2">
+          <ul>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="index.html">Home</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="applications/address.html">Search</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="api/howto.html">API</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="faq.html">Help</a></li>
+          </ul>
+          <ul>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="about.html">About</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="atdis/test.html">Get involved</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="authorities.html">Coverage</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="https://github.com/openaustralia/planningalerts">Source code</a></li>
+            <li><a class="text-white underline hover:opacity-80 focus:outline-none focus:text-navy focus:bg-sun-yellow" href="help/contact.html">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-span-12 p-6 border border-white md:col-span-3">
+        <div class="flex flex-col items-start gap-4">
+          <img alt="Illustration of love letter" src="https://www.planningalerts.org.au/assets/illustration/love-letter-8dabaff180fea6b88875acd5b9a23b89b1b794e08e0b98b64ddbc0439d4ae3a8.svg" width="68" height="52" />
+          <p>Your donations keep this site and others like it running</p>
+            <a class="font-semibold px-4 py-2 text-lg text-white bg-navy hover:text-navy hover:bg-white hover:ring-2 hover:ring-navy focus:outline-none focus:ring-4 focus:ring-sun-yellow inline-block" href="https://donate.planningalerts.org.au">
+    <div class="flex items-baseline justify-center gap-4">
+      <div>
+            Donate now
+</div>
+    </div>
+</a>        </div>
+      </div>
+    </div>
+
+</div>
+  <hr class="mt-12 text-[#479590]">
+  <div class="max-w-6xl px-6 mx-auto sm:px-10">
+  
+    <div class="grid grid-cols-12 gap-4 pt-8 md:pt-16 row">
+      <div class="col-span-12 md:col-span-5">
+        <div>
+          <p>
+            Built and maintained by
+            <a href="https://www.oaf.org.au/" class="block h-6 mt-4 bg-no-repeat bg-oaf-logo focus:outline-none focus:ring-4 focus:ring-sun-yellow">
+              <span class="sr-only">OpenAustralia Foundation</span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-span-12 md:col-span-4">
+        <div class="space-y-8">
+          <p>
+            <a href="https://www.oaf.org.au/" class="text-white underline hover:opacity-80 focus:outline-none focus:bg-sun-yellow focus:text-navy">OpenAustralia Foundation</a> is a <a href="https://www.acnc.gov.au/charity/charities/6bf25724-39af-e811-a960-000d3ad24282/profile" class="text-white underline hover:opacity-80 focus:outline-none focus:bg-sun-yellow focus:text-navy">registered charity</a> in Australia - company limited by guarantee.
+            ABN&nbsp;<a href="https://www.abr.business.gov.au/ABN/View/24138089942" class="text-white underline hover:opacity-80 focus:outline-none focus:bg-sun-yellow focus:text-navy">24&nbsp;138&nbsp;089&nbsp;942</a>.
+          </p>
+          <p>
+            We acknowledge the traditional owners of the land now known as Australia.
+          We pay our respects to their elders past, present and emerging.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-start col-span-12 md:justify-end md:col-span-3">
+        <a class="inline-block focus:outline-none focus:ring-4 focus:ring-sun-yellow" href="https://www.acnc.gov.au/charity/charities/6bf25724-39af-e811-a960-000d3ad24282/profile">
+          <img alt="ACNC Registered Charity Tick" src="https://www.planningalerts.org.au/assets/charity-tick-80979eb45dfd041a327fa3957ebb1d3de7caaaca1431f7732583d1742c928a12.svg" width="100" height="100" />
+</a>      </div>
+    </div>
+
+</div>
+</footer>
+
+  </body>
+</html>
