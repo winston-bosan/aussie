@@ -356,7 +356,7 @@ email alerts
     </div>
   </dt>
   <dd class="ml-10 md:py-1 md:border-t border-light-grey2 md:ml-0">
-      <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline " href="3323776.html#comments">11 comments</a>
+      <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow font-bold underline " href="3323776.html#comments">12 comments</a>
   made here on Planning Alerts
 
   </dd>
@@ -449,7 +449,7 @@ email alerts
       <div class="relative inline-block">
   <div class="inline-block px-4 py-2 text-3xl rounded-2xl font-bold text-white bg-lavender">
     
-        11
+        12
 
   </div>
   <div class="w-0 h-0 absolute right-4
@@ -1627,7 +1627,7 @@ Mornington Peninsula Shire Council
 
     <div class="text-lg text-navy">
   <time datetime="2025-10-07T00:06:21Z">
-    1 day ago
+    2 days ago
 </time></div>
 
 
@@ -1705,6 +1705,110 @@ Mornington Peninsula Shire Council
 
       <div class="mt-4">
         <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow hover:underline text-lg" href="https://www.planningalerts.org.au/comments/168389/reports/new">Report this comment</a>
+
+      </div>
+</div>
+</article>
+
+
+    </div>
+    <div class="pt-12" id="comment168396">
+      <article class="flex flex-col gap-2 sm:gap-6 sm:flex-row">
+  <div class="h-8 text-navy text-7xl">”</div>
+  <div>
+    <div class="prose prose-xl prose-pre:bg-light-grey prose-pre:text-navy prose-pre:rounded-none prose-td:border-2 prose-td:border-white prose-td:bg-light-grey prose-td:px-4 prose-th:px-4 prose-th:py-3 prose-th:text-white prose-th:bg-navy prose-th:whitespace-nowrap max-w-none prose-h3:font-sans prose-h3:text-xl prose-h3:font-bold prose-h2:font-display prose-h2:text-2xl prose-h2:font-bold prose-a:underline prose-a:font-bold prose-a:text-fuchsia hover:prose-a:text-fuchsia-darker focus:prose-a:outline-none focus:prose-a:bg-sun-yellow prose-h1:text-3xl prose-h1:font-display prose-h1:font-bold prose-ul:pl-6 prose-li:pl-0 prose-li:my-0 prose-li:marker:text-navy">
+  
+  <p>As per last submission, I still feel 5 dwellings on a block of that size is unreasonable and not aligned to the character of the neighborhood. A 2-3 house sub-division on a block of this size seems reasonable. </p>
+
+<p>Something also needs to be done by council to the creek alongside the house at the property border if anything at 35 Sherwood gets approved to deal with drainage, and to make the creek safer to walk through.</p>
+
+</div>
+
+
+    <div class="mt-6 text-lg font-bold text-navy">
+      Adrian P
+    </div>
+
+    <div class="text-lg text-navy">
+  <time datetime="2025-10-08T09:46:14Z">
+    About 21 hours ago
+</time></div>
+
+
+      <div class="text-lg text-navy">
+    Delivered to
+Mornington Peninsula Shire Council
+
+  <div class="inline-block ml-1">
+    <div
+  class="relative inline-block"
+  x-data="{
+    open: false,
+    cleanup: null,
+    updatePosition() {
+      window.FloatingUIDOM.computePosition($refs.button, $refs.popover, {
+        placement: 'bottom',
+        middleware: [
+          window.FloatingUIDOM.flip(),
+          window.FloatingUIDOM.offset(24),
+          window.FloatingUIDOM.shift(),
+          window.FloatingUIDOM.arrow({ element: $refs.arrow }),
+        ],
+      }).then(({x, y, middlewareData, placement }) => {
+        const staticSide = {
+          top: 'bottom',
+          bottom: 'top',
+        }[placement];
+
+        Object.assign($refs.popover.style, {
+          left: x + 'px',
+          top: y + 'px',
+        });
+
+        if (middlewareData.arrow) {
+          const { x, y } = middlewareData.arrow;
+          Object.assign($refs.arrow.style, {
+            left: x != null ? (x + 'px') : '',
+            top: y != null ? (y + 'px') : '',
+            [staticSide]: '-12px',
+          });
+        }
+      });
+    }
+  }"
+  x-init="
+    $watch('open', (open) => {
+      if (open) {
+        cleanup = window.FloatingUIDOM.autoUpdate($refs.button, $refs.popover, updatePosition);
+      } else {
+        if (!!cleanup) {
+          cleanup();
+        }
+      }
+    });
+  ">
+  <button x-ref="button" x-on:click.prevent="open=!open" class="text-base font-bold text-white rounded-full size-6 bg-fuchsia hover:bg-fuchsia-darker focus:outline-none focus:ring-sun-yellow focus:ring-4">
+    <span class="sr-only">Info</span>
+    i
+  </button>
+  <div x-ref="popover" role="tooltip" class="w-[500px] max-w-[100vw] absolute z-10" x-show="open" x-on:click.outside="open=false" x-transition>
+    <div x-ref="arrow" class="absolute w-6 h-6 rotate-45 bg-navy"></div>
+    <div class="px-8 py-6 text-white shadow-md bg-navy">
+      
+        This comment was successfully delivered to the email server of
+  Mornington Peninsula Shire Council
+  on
+  08 October 2025 09:46 UTC
+
+
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+      <div class="mt-4">
+        <a class="text-fuchsia hover:text-fuchsia-darker focus:outline-none focus:bg-sun-yellow hover:underline text-lg" href="https://www.planningalerts.org.au/comments/168396/reports/new">Report this comment</a>
 
       </div>
 </div>
